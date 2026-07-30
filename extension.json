@@ -1,0 +1,45 @@
+{
+	"name": "lib-attr-editor",
+	"uuid": "7e9b06b997f247b7916c10ff58f0d9e7",
+	"displayName": "库属性编辑",
+	"description": "搜索库中器件并编辑其扩展属性",
+	"version": "1.7.1",
+	"publisher": "",
+	"engines": { "eda": "^3.2.0" },
+	"license": "Apache-2.0",
+	"repository": { "type": "extension-store", "url": "" },
+	"categories": "Other",
+	"keywords": ["Library", "Device", "Attribute"],
+	"images": { "logo": "./images/logo.png" },
+	"homepage": "",
+	"bugs": "",
+	"activationEvents": {},
+	"entry": "./dist/index",
+	"dependentExtensions": {},
+	"headerMenus": {
+		"home": [{
+			"id": "libAttrEditor",
+			"title": "库属性编辑",
+			"menuItems": [
+				{ "id": "openPanel", "title": "打开库属性编辑器", "registerFn": "openPanel" },
+				{ "id": "openBatchPanel", "title": "批量操作库属性", "registerFn": "openBatchPanel" }
+			]
+		}],
+		"sch": [{
+			"id": "libAttrEditorSch",
+			"title": "库属性编辑",
+			"menuItems": [
+				{ "id": "openPanelSch", "title": "打开库属性编辑器", "registerFn": "openPanel" },
+				{ "id": "openBatchPanelSch", "title": "批量操作库属性", "registerFn": "openBatchPanel" }
+			]
+		}],
+		"pcb": [{
+			"id": "libAttrEditorPcb",
+			"title": "库属性编辑",
+			"menuItems": [
+				{ "id": "openPanelPcb", "title": "打开库属性编辑器", "registerFn": "openPanel" },
+				{ "id": "openBatchPanelPcb", "title": "批量操作库属性", "registerFn": "openBatchPanel" }
+			]
+		}]
+	}
+}

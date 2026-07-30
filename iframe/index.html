@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>库属性编辑</title>
+<link rel="stylesheet" href="/iframe/editor.css" />
+</head>
+<body>
+<div class="vbox" style="height:calc(100vh - 24px)">
+<div class="hbox">
+<label>库:</label><select class="erc-select" id="libSelect" style="width:130px"></select>
+<label>搜索:</label><input type="text" class="erc-input" id="searchInput" placeholder="属性名/属性值/器件名" style="width:140px">
+<button class="erc-btn primary" id="btnSearch">搜索</button>
+<button class="erc-btn default" id="btnStopSearch" style="display:none">停止</button>
+</div>
+<div class="vbox"><div class="hbox"><div class="section-title">搜索结果</div><span id="searchCount" style="color:#999"></span></div>
+<div class="result-list" id="resultList"><div class="result-empty">输入关键字 → 搜索（匹配属性名/属性值/器件名）</div></div></div>
+<div class="vbox" style="flex:1">
+<div class="hbox"><div class="section-title">属性编辑</div><span id="deviceName" style="color:#999"></span><span id="matchInfo" style="color:#1890ff;font-size:11px"></span></div>
+<div class="attr-table-wrap" id="attrTableWrap"><div class="result-empty" id="attrPlaceholder">请先搜索并选择器件</div>
+<table class="attr-table" id="attrTable" style="display:none"><thead><tr><th class="attr-name">属性名</th><th class="attr-value">值</th><th class="attr-action"></th></tr></thead><tbody id="attrBody"></tbody></table></div>
+<div class="hbox" id="addPropRow" style="display:none"><input type="text" class="erc-input" id="newPropKey" placeholder="新属性名" style="width:120px"><input type="text" class="erc-input" id="newPropVal" placeholder="值" style="width:160px"><button class="erc-btn default" id="btnAddProp">添加属性</button></div>
+</div>
+<div class="hbox sep" style="justify-content:flex-end"><button class="erc-btn danger" id="btnDeleteDevice" style="display:none">删除器件</button><span class="spacer"></span><button class="erc-btn default" id="btnReset">重置</button><button class="erc-btn primary" id="btnSave" disabled>保存</button></div>
+</div>
+<script src="/iframe/editor.js"></script>
+</body>
+</html>

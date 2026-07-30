@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>批量操作库属性</title>
+<link rel="stylesheet" href="/iframe/batch.css" />
+</head>
+<body>
+<div class="vbox" style="height:100vh;padding:12px">
+<div class="hbox"><label style="width:56px;flex-shrink:0">库:</label><select class="erc-select" id="libSelect" style="flex:1"></select></div>
+<div class="hbox"><label style="width:56px;flex-shrink:0">属性名:</label><input type="text" class="erc-input" id="attrKeys" placeholder="精确属性名, 逗号分隔, 支持中文" style="flex:1"><button class="erc-btn primary" id="btnSearch">搜索</button><button class="erc-btn default" id="btnStop" style="display:none">停止</button></div>
+<div class="hbox"><div class="section-title">匹配结果</div><span id="resultInfo" class="hint"></span><span class="spacer"></span><span id="selectedInfo" class="hint"></span></div>
+<div class="table-wrap" id="tableWrap">
+<div class="result-empty" id="placeholder">输入属性名 → 搜索 → 勾选 → 批量修改/删除</div>
+<table class="btable" id="btable" style="display:none"><thead><tr><th class="b-sel"><input type="checkbox" id="selectAll"></th><th class="b-dev">器件</th><th class="b-key">属性名</th><th>当前值</th></tr></thead><tbody id="btbody"></tbody></table>
+</div>
+<div class="progress-bar" id="tableStatus" style="display:none"></div>
+<div class="hbox sep" style="padding-top:8px"><input type="text" class="erc-input" id="newVal" placeholder="批量修改为" style="width:160px"><button class="erc-btn primary" id="btnModify">批量修改</button><span class="spacer"></span><button class="erc-btn danger" id="btnDelete">批量删除</button></div>
+</div>
+<script src="/iframe/batch.js"></script>
+</body>
+</html>
