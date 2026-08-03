@@ -11,13 +11,19 @@ export function activate(status?: 'onStartupFinished', arg?: string): void {}
 
 export function openPanel(): void {
 	void eda.sys_IFrame.openIFrame('iframe/index.html', 500, 540, EDITOR_IFRAME, {
-		title: '库属性编辑', maximizeButton: true, minimizeButton: true, minimizeStyle: 'constricted',
+		title: '库属性编辑',
+		maximizeButton: true,
+		minimizeButton: true,
+		minimizeStyle: 'constricted',
 	});
 }
 
 export function openBatchPanel(): void {
 	void eda.sys_IFrame.openIFrame('iframe/batch.html', 500, 480, BATCH_IFRAME, {
-		title: '批量操作库属性', maximizeButton: true, minimizeButton: true, minimizeStyle: 'constricted',
+		title: '批量操作库属性',
+		maximizeButton: true,
+		minimizeButton: true,
+		minimizeStyle: 'constricted',
 	});
 }
 
